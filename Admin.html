@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0D0F14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tema.css">
+<title>Área administrativa · PedeGo</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+</head>
+<body class="login-pagina" data-sem-layout>
+<main class="login-caixa">
+  <div>
+    <a class="marca" href="Podrao.html"><span class="marca-logo" data-icone="burger"></span><span data-loja-nome>PedeGo</span></a>
+    <h1>Área administrativa</h1>
+    <p class="sub">Acesso restrito. Entre com o usuário e a senha do administrador.</p>
+  </div>
+  <form id="form-login">
+    <div class="campo">
+      <label for="usuario">Usuário</label>
+      <input class="entrada" id="usuario" name="usuario" autocomplete="username" maxlength="64" required autofocus>
+    </div>
+    <div class="campo">
+      <label for="senha">Senha</label>
+      <div class="com-icone">
+        <input class="entrada" id="senha" name="senha" type="password" autocomplete="current-password" maxlength="128" required>
+        <button type="button" class="olho" id="ver-senha" aria-label="Mostrar senha" data-icone="eye"></button>
+      </div>
+    </div>
+    <div id="erro-login" class="aviso sem-margem" role="alert" hidden></div>
+    <button class="btn btn-primary" id="entrar" type="submit">Entrar</button>
+  </form>
+  <a class="nota" href="Podrao.html">Voltar para o site</a>
+</main>
+<script src="config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

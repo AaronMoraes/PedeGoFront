@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0D0F14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tema.css">
+<title>Painel · PedeGo</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+</head>
+<body data-sem-layout>
+<header class="topo painel-topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="Podrao.html"><span class="marca-logo" data-icone="burger"></span><span data-loja-nome>PedeGo</span></a>
+    <span class="chip">Painel</span>
+    <div class="painel-usuario">
+      <span id="usuario-logado"></span>
+      <button type="button" class="btn btn-ghost btn-sm" id="sair"><span data-icone="logout"></span>Sair</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap painel">
+  <h1>Cardápio</h1>
+  <p class="sub">O que você alterar aqui aparece no site na hora.</p>
+
+  <div class="abas" id="abas" role="tablist" aria-label="Categorias"></div>
+
+  <div class="ferramentas">
+    <div class="busca">
+      <span data-icone="search"></span>
+      <label class="sr-only" for="busca">Buscar por nome</label>
+      <input class="entrada" id="busca" type="search" placeholder="Buscar por nome" autocomplete="off">
+    </div>
+    <button type="button" class="btn btn-primary" id="novo"><span data-icone="plus"></span><span id="novo-texto">Novo lanche</span></button>
+  </div>
+
+  <div class="linhas" id="lista" aria-live="polite"></div>
+</main>
+
+<dialog id="dlg-produto" aria-labelledby="form-titulo">
+  <form id="form-produto" class="dlg-corpo" novalidate>
+    <div class="dlg-cab">
+      <h2 id="form-titulo">Novo produto</h2>
+      <button type="button" class="fechar" id="fechar-form" aria-label="Fechar" data-icone="x"></button>
+    </div>
+    <div class="form-grade">
+      <div class="campo cheio"><label for="f-nome">Nome</label><input class="entrada" id="f-nome" maxlength="80" required></div>
+      <div class="campo"><label for="f-preco">Preço (R$)</label><input class="entrada" id="f-preco" inputmode="decimal" placeholder="12,50" required></div>
+      <div class="campo"><label for="f-categoria">Categoria</label><select class="entrada" id="f-categoria"></select></div>
+      <div class="campo cheio">
+        <label for="f-descricao">Ingredientes ou itens</label>
+        <textarea class="entrada" id="f-descricao" maxlength="600"></textarea>
+        <span class="dica">Um item por linha. Ex.: Carne artesanal, Mussarela, Alface.</span>
+      </div>
+      <div class="campo"><label for="f-selo">Selo (opcional)</label><input class="entrada" id="f-selo" maxlength="20" placeholder="Novo, Mais pedido..."></div>
+      <div class="campo">
+        <span class="rotulo">Foto</span>
+        <div class="envio-img">
+          <img id="preview" alt="Prévia da foto">
+          <div class="campo">
+            <input type="file" id="f-arquivo" accept="image/jpeg,image/png,image/webp" aria-label="Escolher foto">
+            <button type="button" class="btn btn-ghost btn-sm" id="remover-img" hidden>Remover foto</button>
+            <span class="dica">JPG, PNG ou WebP, até 3 MB.</span>
+          </div>
+        </div>
+      </div>
+      <label class="marcar cheio"><input type="checkbox" id="f-home"> Mostrar em "Mais pedidos" na página inicial</label>
+      <label class="marcar cheio"><input type="checkbox" id="f-ativo"> Disponível no cardápio</label>
+    </div>
+    <p class="erro-form" id="erro-form" role="alert" hidden></p>
+    <div class="dlg-acoes">
+      <button type="button" class="btn btn-ghost" id="cancelar">Cancelar</button>
+      <button type="submit" class="btn btn-primary" id="salvar">Salvar</button>
+    </div>
+  </form>
+</dialog>
+<script src="config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/painel.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0D0F14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tema.css">
+<title>Seu pedido · PedeGo</title>
+<meta name="robots" content="noindex">
+</head>
+<body data-pagina="carrinho" data-barra="off">
+<header id="topo"></header>
+<main class="wrap">
+  <div class="pagina-cab">
+    <h1>Seu pedido</h1>
+    <p>Confira os itens e escolha como pagar.</p>
+  </div>
+
+  <div class="carrinho-grid">
+    <div>
+      <section class="painel-box" aria-labelledby="t-itens">
+        <header><h2 id="t-itens">Itens</h2><span class="chip" id="qtd-itens">0 itens</span></header>
+        <div id="aviso-sync" class="aviso info" role="status" hidden></div>
+        <div id="itens-carrinho"></div>
+      </section>
+
+      <section class="painel-box" aria-labelledby="t-pag">
+        <header><h2 id="t-pag">Forma de pagamento</h2></header>
+        <div class="pagamentos" role="radiogroup" aria-labelledby="t-pag">
+          <button type="button" class="pagamento" role="radio" aria-checked="false" data-metodo="pix">
+            <span data-icone="pix"></span><span><strong>PIX</strong><small>Pagamento instantâneo</small></span>
+          </button>
+          <button type="button" class="pagamento" role="radio" aria-checked="false" data-metodo="cartao">
+            <span data-icone="card"></span><span><strong>Cartão</strong><small>Crédito ou débito</small></span>
+          </button>
+        </div>
+        <div id="aviso-pagamento" class="aviso" role="alert" hidden>Selecione uma forma de pagamento para continuar.</div>
+        <div id="aviso-erro" class="aviso" role="alert" hidden>Não foi possível finalizar o pedido.</div>
+      </section>
+    </div>
+
+    <aside class="resumo" aria-labelledby="t-resumo">
+      <div class="recibo">
+        <h3 id="t-resumo">Resumo do pedido</h3>
+        <hr>
+        <div class="recibo-linha"><span>Produtos</span><strong id="subtotal">R$ 0,00</strong></div>
+        <hr>
+        <div class="recibo-linha recibo-total"><span>Total</span><strong id="total">R$ 0,00</strong></div>
+        <button type="button" id="finalizar" class="btn btn-primary" disabled>Finalizar pedido</button>
+      </div>
+    </aside>
+  </div>
+</main>
+<footer id="rodape"></footer>
+
+<dialog id="dlg-confirmacao" aria-labelledby="conf-titulo">
+  <div class="dlg-corpo centro">
+    <div class="sucesso-ic" data-icone="check"></div>
+    <h2 id="conf-titulo">Pedido realizado!</h2>
+    <p class="nota">Recebemos o seu pedido e ele já segue para a cozinha.</p>
+    <div id="confirmacao-detalhes"></div>
+    <button type="button" id="fechar-confirmacao" class="btn btn-primary">Continuar</button>
+  </div>
+</dialog>
+<script src="config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/carrinho.js"></script>
+</body>
+</html>

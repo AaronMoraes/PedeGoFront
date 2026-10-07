@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0D0F14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tema.css">
+<title>PedeGo · Seu pedido, do seu jeito</title>
+<meta name="description" content="Escolha seus favoritos, monte o pedido e finalize em poucos toques.">
+</head>
+<body data-pagina="home">
+<header id="topo"></header>
+<main>
+  <section class="hero">
+    <div class="wrap hero-in">
+      <div>
+        <h1>Seu pedido,<br>do seu jeito.</h1>
+        <p class="lead">Escolha seus favoritos, monte o pedido e finalize em poucos toques.</p>
+        <div class="hero-acoes">
+          <a class="btn btn-primary" href="Lanches.html">Ver cardápio</a>
+          <a class="btn btn-ghost" href="Combos.html">Ver combos</a>
+        </div>
+      </div>
+      <div class="recibo imprimir" role="img" aria-label="Como pedir em três passos: escolha, pague e receba">
+        <h3 data-loja-nome>PedeGo</h3>
+        <p class="sub">Como pedir</p>
+        <hr>
+        <ol class="passos">
+          <li><div><b>Escolha</b><span>Lanches, combos e bebidas direto do cardápio.</span></div></li>
+          <li><div><b>Pague</b><span>PIX ou cartão, você decide na hora.</span></div></li>
+          <li><div><b>Receba</b><span>Seu pedido segue para a cozinha.</span></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="secao-cab"><div><h2>Explore o cardápio</h2></div></div>
+      <div class="categorias">
+        <a class="categoria" href="Lanches.html"><span data-icone="burger"></span><h3>Lanches</h3><p data-conta="lanche">Escolha seu lanche favorito.</p></a>
+        <a class="categoria" href="Combos.html"><span data-icone="box"></span><h3>Combos</h3><p data-conta="combo">Mais opções para aproveitar.</p></a>
+        <a class="categoria" href="Bebidas.html"><span data-icone="cup"></span><h3>Bebidas</h3><p data-conta="bebida">Complete seu pedido.</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="secao-destaques">
+    <div class="wrap">
+      <div class="secao-cab"><div><h2>Mais pedidos</h2><p>Os queridinhos de quem já pediu.</p></div></div>
+      <div class="grade" id="grade"></div>
+    </div>
+  </section>
+</main>
+<footer id="rodape"></footer>
+<script src="config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cardapio.js"></script>
+</body>
+</html>

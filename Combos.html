@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0D0F14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tema.css">
+<title>Combos · PedeGo</title>
+<meta name="description" content="Mais opções para aproveitar, com lanche, porção e bebida.">
+</head>
+<body data-pagina="combos" data-categoria="combo">
+<header id="topo"></header>
+<main>
+  <div class="wrap">
+    <div class="pagina-cab">
+      <h1>Combos</h1>
+      <p>Mais opções para aproveitar, com lanche, porção e bebida.</p>
+    </div>
+    <div class="ferramentas">
+      <div class="busca">
+        <span data-icone="search"></span>
+        <label class="sr-only" for="busca">Buscar em Combos</label>
+        <input id="busca" class="entrada" type="search" placeholder="Buscar em Combos" autocomplete="off">
+      </div>
+      <span class="chip" id="contagem" aria-live="polite"></span>
+    </div>
+    <section class="grade" id="grade" aria-label="Combos"></section>
+  </div>
+  <noscript><p class="wrap vazio">Ative o JavaScript para ver o cardápio.</p></noscript>
+</main>
+<footer id="rodape"></footer>
+<script src="config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cardapio.js"></script>
+</body>
+</html>
